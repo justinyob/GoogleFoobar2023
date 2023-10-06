@@ -2,3 +2,4 @@ A Knight move can be one of 8 operations (+-17, +-15, +-10, +-16)
 
 
 Create algorithm to translate into simple cartesian coords for easier processing
+
