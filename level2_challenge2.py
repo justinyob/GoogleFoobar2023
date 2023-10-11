@@ -21,14 +21,24 @@ def solution(l, t):
         init_index = init_index + 1
 """
             
-            
-def solution(l, t):
+index_count = 0
+
+def solution(l, t):    
+    current_index = index_count
     for i in l:
         if i == t:
             return [0, 0]
-        for x in range(1, len(l)):
-            z = i + l[x]
-            if z == t:
-                print(str([i, i + x]))
+        else:
+            indexes_remaining = range(len(l) - l.index(i) - 1)
+            for x in indexes_remaining:
+                end_index = current_index + 1
+                i+=l[x + current_index + 1]
+                if i == t:
+                    return [current_index, end_index]                
+                end_index+=1
+        current_index+=1
+    return [-1, -1]
 
-solution([4, 3, 5, 7, 8], 12)    
+solution([2, 2, 2, 2], 17)
+
+ 
