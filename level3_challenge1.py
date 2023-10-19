@@ -31,7 +31,7 @@ def solution(x, y):
                 logging.debug([intX, intY])
             elif intX < intY:
                 intY -= intX
-                steps +=1
+                steps += 1
                 logging.debug([intX, intY])
             
             if [intX, intY] == [1, 1]:
@@ -43,7 +43,6 @@ def solution(x, y):
                 return "impossible"
             logging.debug(steps)
 
-            if steps > 100:
-                return '0'
+            
                  
-print(solution('5000000000','40000000001'))
+print(solution('5000000000','5000000001'))

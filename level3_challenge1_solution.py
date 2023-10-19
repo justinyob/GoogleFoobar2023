@@ -16,13 +16,13 @@ def solution(x, y):
                 return "impossible"
             
             varComp = [intX, intY]
-            if intX > intY:
+            if intX >= intY:
                 intX -= intY
                 steps += 1
                 
             elif intX < intY:
                 intY -= intX
-                steps +=1
+                steps += 1
                 
             if [intX, intY] == [1, 1]:
                 return str(steps)
