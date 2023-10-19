@@ -20,7 +20,7 @@ def solution(x, y):
         logging.debug(f"Variables are {intX} and {intY}")
         while True:
             
-            if intX == intY:
+            if intX == intY or (intX % 2 == 0 and intY % 2 == 0):
                 logging.debug(f"I finished and my result is impossible")
                 return "impossible"
 
@@ -42,6 +42,8 @@ def solution(x, y):
                 logging.debug(f"I finished and my result is impossible")
                 return "impossible"
             logging.debug(steps)
-            
-            
-solution('1', '1')
+
+            if steps > 100:
+                return '0'
+                 
+print(solution('5000000000','40000000001'))

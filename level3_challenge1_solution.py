@@ -12,7 +12,7 @@ def solution(x, y):
         intX = int(x)
         intY = int(y)
         while True:
-            if intX == intY:
+            if intX == intY or (intX % 2 == 0 and intY % 2 == 0):
                 return "impossible"
             
             varComp = [intX, intY]
@@ -28,4 +28,3 @@ def solution(x, y):
                 return str(steps)
             if [intX, intY] == varComp:
                 return "impossible"
-            
